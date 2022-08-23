@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+// vars
+// colors
+$DarkBlue: hsl(240, 38%, 20%);
+$GrayishBlue: hsl(240, 18%, 77%);
+
+// footer
+footer {
+  display: none;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 700px) {
+    background: url(../images/pattern-curve.svg) no-repeat;
+    background-position: left bottom;
+  }
+}
+
+.component {
+  min-height: 100vh;
+  max-width: 80rem;
+  display: flex;
+  flex-flow: column;
+  @media screen and (min-width: 700px) {
+    flex-direction: row-reverse;
+    min-height: auto;
+  }
+  .image {
+    flex-basis: 50%;
+    position: relative;
+    margin: 2rem 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: red;
+    background-image: url(../images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @media screen and (min-width: 700px) {
+      margin: 0;
+      align-self: center;
+    }
+    .display-image {
+      height: 100%;
+      width: 100%;
+      transform: scale(0.8);
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgba(51, 51, 51, 0.226);      
+      @media screen and (min-width: 700px) {
+        height: auto;
+        align-self: center !important;
+      }
+    }
+  }
+  .text {
+    flex-basis: 50%;
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    // background: blue;
+    background-image: url(../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: left bottom;
+    @media screen and (min-width: 700px) {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0;
+      padding-left: 1rem;
+      background-image: none;
+    }
+    .text-content {
+      @media screen and (min-width: 700px) {
+        position: relative;
+        left: 90%;
+        transform: translateX(-50%);
+      }
+      .quote {
+        position: relative;
+        text-align: center;
+        font-size: 1.1rem;
+        line-height: 1.3em;
+        font-weight: 300;
+        color: $DarkBlue;
+        @media screen and (min-width: 700px) {
+          font-size: 1.2rem;
+          text-align: left;
+          width: 80%;
+        }
+        @media screen and (min-width: 1000px) {
+          font-size: 1.5rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: -1rem;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-image: url(../images/pattern-quotes.svg);
+          background-repeat: no-repeat;
+          background-size: 15%;
+          background-position: center top;
+          @media screen and (min-width: 700px) {
+            background-position: left top;
+            top: -2rem;
+            left: 17%;
+          }
+        }
+      }
+      .person {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-top: 2rem;
+        @media screen and (min-width: 700px) {
+          flex-direction: row;
+          gap: 0.7rem;
+        }
+        .name {
+          font-size: 1.1rem;
+          color: $DarkBlue;
+        }
+        .role {
+          color: $GrayishBlue;
+        }
+      }
+    }
+  }
+}
+
+// control Buttons
+
+.controls {
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  background: white;
+  width: fit-content;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 5px 5px rgba(66, 66, 66, 0.164);
+  @media screen and (min-width: 700px) {
+    left: 26%;
+    bottom: 7%;
+  }
+  .prevBtn,
+  .nextBtn {
+    flex-basis: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    // width: 100%;
+    border-radius: 30px 0 0 30px;
+    padding: 0.6rem 1rem;
+    background: white;
+    &:nth-of-type(2) {
+      border-radius: 0 30px 30px 0;
+    }
+    &:focus-within {
+      border: 2px solid $DarkBlue;
+    }
+  }
+}

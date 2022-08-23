@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+footer {
+  display: none;
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    background: url(../images/pattern-curve.svg) no-repeat;
+    background-position: left bottom;
+  }
+}
+
+.component {
+  min-height: 100vh;
+  max-width: 80rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media screen and (min-width: 700px) {
+  .component {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    min-height: auto;
+  }
+}
+
+.component .image {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  position: relative;
+  margin: 2rem 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media screen and (min-width: 700px) {
+  .component .image {
+    margin: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.component .image .display-image {
+  height: 100%;
+  width: 100%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 10px rgba(51, 51, 51, 0.226);
+          box-shadow: 0 10px 10px rgba(51, 51, 51, 0.226);
+}
+
+@media screen and (min-width: 700px) {
+  .component .image .display-image {
+    height: auto;
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
+  }
+}
+
+.component .text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2rem;
+  background-image: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: left bottom;
+}
+
+@media screen and (min-width: 700px) {
+  .component .text {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0;
+    padding-left: 1rem;
+    background-image: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .component .text .text-content {
+    position: relative;
+    left: 90%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.component .text .text-content .quote {
+  position: relative;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.3em;
+  font-weight: 300;
+  color: #202046;
+}
+
+@media screen and (min-width: 700px) {
+  .component .text .text-content .quote {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .component .text .text-content .quote {
+    font-size: 1.5rem;
+  }
+}
+
+.component .text .text-content .quote::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: center top;
+}
+
+@media screen and (min-width: 700px) {
+  .component .text .text-content .quote::after {
+    background-position: left top;
+    top: -2rem;
+    left: 17%;
+  }
+}
+
+.component .text .text-content .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .component .text .text-content .person {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.7rem;
+  }
+}
+
+.component .text .text-content .person .name {
+  font-size: 1.1rem;
+  color: #202046;
+}
+
+.component .text .text-content .person .role {
+  color: #babacf;
+}
+
+.controls {
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  background: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 5px rgba(66, 66, 66, 0.164);
+          box-shadow: 0 5px 5px rgba(66, 66, 66, 0.164);
+}
+
+@media screen and (min-width: 700px) {
+  .controls {
+    left: 26%;
+    bottom: 7%;
+  }
+}
+
+.controls .prevBtn,
+.controls .nextBtn {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 30px 0 0 30px;
+  padding: 0.6rem 1rem;
+  background: white;
+}
+
+.controls .prevBtn:nth-of-type(2),
+.controls .nextBtn:nth-of-type(2) {
+  border-radius: 0 30px 30px 0;
+}
+
+.controls .prevBtn:focus-within,
+.controls .nextBtn:focus-within {
+  border: 2px solid #202046;
+}
+/*# sourceMappingURL=style.css.map */
